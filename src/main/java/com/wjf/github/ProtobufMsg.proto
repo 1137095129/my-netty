@@ -1,0 +1,91 @@
+syntax = "proto3";
+
+option java_package="com.wjf.github";
+option java_outer_classname="ProtoMsg";
+
+message MyProtoMsg{
+    optional HeadType head_type=1;
+    optional Login_Request login_request=2;
+    optional Login_Response login_response=3;
+    optional KeepAlive_Request keepalive_request=4;
+    optional KeepAlive_Response keepalive_response=5;
+    optional Message_Request message_request=6;
+    optional Message_Response message_response=7;
+    optional Message_Notice message_notice=8;
+    optional Logout_Request logout_request=9;
+    optional Logout_Response logout_response=10;
+}
+
+enum HeadType{
+    LOGIN_REQUEST=0;
+    LOGIN_RESPONSE=1;
+    KEEPALIVE_REQUEST=2;
+    KEEPALIVE_RESPONSE=3;
+    MESSAGE_REQUEST=4;
+    MESSAGE_RESPONSE=5;
+    LOGOUT_REQUEST=6;
+    LOGOUT_RESPONSE=7;
+    MESSAGE_NOTICE=8;
+}
+
+message Login_Request{
+    optional string uid=1;
+    optional string device_num=2;
+    optional uint32 platform=3;
+}
+
+message Login_Response{
+    optional bool result=1;
+    optional uint32 code=2;
+    optional string msg=3;
+    optional string session_id=4;
+    optional string token=5;
+}
+
+message KeepAlive_Request{
+    optional string uid=1;
+    optional string token=2;
+    optional string session_id=3;
+    optional string msg=4;
+}
+
+message KeepAlive_Response{
+    optional bool result=1;
+    optional uint32 code=2;
+    optional string msg=3;
+}
+
+message Message_Request{
+    optional string uid=1;
+    optional string token=2;
+    optional string session_id=3;
+    optional string content=4;
+    optional string to_uid=5;
+    optional string json=6;
+}
+
+message Message_Response{
+    optional bool result=1;
+    optional uint32 code=2;
+    optional string msg=3;
+}
+
+message Message_Notice{
+    optional uint32 message_type=1;
+    optional string content=2;
+    optional string resource_url=3;
+    optional string json=4;
+    optional uint64 timestamp=5;
+}
+
+message Logout_Request{
+    optional string uid=1;
+    optional string token=2;
+    optional string session_id=3;
+}
+
+message Logout_Response{
+    optional bool result=1;
+    optional uint32 code=2;
+    optional string msg=3;
+}
