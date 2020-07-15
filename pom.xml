@@ -13,7 +13,7 @@
 		<target.version>1.8</target.version>
 		<compiler.version>3.8.1</compiler.version>
 		<compiler.encoding>UTF-8</compiler.encoding>
-		<netty.version>4.1.36.Final</netty.version>
+		<netty.version>4.1.42.Final</netty.version>
 		<protobuf.version>3.11.4</protobuf.version>
 		<log4j.version>1.2.17</log4j.version>
 		<hutool.version>4.6.4</hutool.version>
