@@ -15,7 +15,7 @@
 		<compiler.encoding>UTF-8</compiler.encoding>
 		<netty.version>4.1.42.Final</netty.version>
 		<protobuf.version>3.11.4</protobuf.version>
-		<log4j.version>1.2.17</log4j.version>
+		<log4j.version>1.2.27</log4j.version>
 		<hutool.version>4.6.4</hutool.version>
 		<jackson.version>2.10.4</jackson.version>
 	</properties>
